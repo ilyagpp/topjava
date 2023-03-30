@@ -1,6 +1,7 @@
 package ru.javawebinar.topjava.web;
 
-import org.testng.annotations.Test;
+
+import org.junit.jupiter.api.Test;
 import ru.javawebinar.topjava.UserTestData;
 
 import static org.hamcrest.Matchers.*;
