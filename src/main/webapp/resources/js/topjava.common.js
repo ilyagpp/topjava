@@ -32,6 +32,18 @@ function deleteRow(id) {
     });
 }
 
+function filter() {
+    form = $("#filterForm")
+    $.ajax({
+        url: ctx.ajaxUrl + "filter",
+        type: "GET",
+        data: form.serialize()
+    }).done(function (data){
+        ctx.datatableApi.clear().rows.add(data).draw();
+        successNoty("Filtered");
+    })
+}
+
 function updateTable() {
     $.get(ctx.ajaxUrl, function (data) {
         ctx.datatableApi.clear().rows.add(data).draw();
