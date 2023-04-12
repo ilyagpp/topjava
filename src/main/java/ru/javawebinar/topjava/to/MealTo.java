@@ -38,7 +38,6 @@ public class MealTo extends BaseTo {
         return calories;
     }
 
-    @JsonIgnore
     public boolean isExcess() {
         return excess;
     }
